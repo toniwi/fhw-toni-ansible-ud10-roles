@@ -1,0 +1,16 @@
+---
+- name: Desinstalar apache2
+  apt:
+    name: apache2
+    state: absent
+    
+- name: Desinstalar nginx
+  apt:
+    name: nginx
+    state: absent
+
+- name: Borrar /var/www/html/
+  file:
+    path: /var/www/html/*
+    state: absent
+...

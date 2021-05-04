@@ -1,0 +1,11 @@
+---
+- name: Instalar nginx
+  apt:
+      name: nginx
+      state: latest
+      
+- name: Recarregar nginx
+  service:
+    name: nginx
+    state: reloaded
+...
